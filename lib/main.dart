@@ -1,4 +1,4 @@
-import 'package:animate/screen/pages/home_page.dart';
+import 'package:animate/screen/pages/animaciones_page.dart';
 
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "curso de flutter fernando herrera animaciones",
-      home: HeadersPage(),
+      home: AnimacionesPage(),
     );
   }
 }
