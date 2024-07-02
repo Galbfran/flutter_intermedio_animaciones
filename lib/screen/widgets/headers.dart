@@ -70,3 +70,177 @@ class _HeaderDiagonalPainter extends CustomPainter {
     return true;
   }
 }
+
+class HeaderTriangular extends StatelessWidget {
+  const HeaderTriangular({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      color: Colors.blue,
+      child: CustomPaint(
+        painter: _HeaderTriangularPainter(),
+      ),
+    );
+  }
+}
+
+class _HeaderTriangularPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint();
+    // propiedades
+    paint.color = Colors.red;
+    paint.style = PaintingStyle.fill;
+    paint.strokeWidth = 5;
+
+    final path = Path();
+
+    path.lineTo(size.width, size.height);
+    path.lineTo(size.width, 0);
+    path.lineTo(0, 0);
+
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return true;
+  }
+}
+
+class HeaderPico extends StatelessWidget {
+  const HeaderPico({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      color: Colors.blue,
+      child: CustomPaint(
+        painter: _HeaderPicoPainter(),
+      ),
+    );
+  }
+}
+
+class _HeaderPicoPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint();
+    // propiedades
+    paint.color = Colors.red;
+    paint.style = PaintingStyle.fill;
+    paint.strokeWidth = 5;
+
+    final path = Path();
+
+    path.lineTo(0, size.height * 0.25);
+    path.lineTo(size.width * 0.5, size.height * 0.35);
+    path.lineTo(size.width, size.height * 0.25);
+    path.lineTo(size.width, 0);
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return true;
+  }
+}
+
+class HeaderCurvo extends StatelessWidget {
+  const HeaderCurvo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      color: Colors.blue,
+      child: CustomPaint(
+        painter: _HeaderCurvoPainter(),
+      ),
+    );
+  }
+}
+
+class _HeaderCurvoPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint();
+    // propiedades
+    paint.color = Colors.red;
+    paint.style = PaintingStyle.fill;
+    paint.strokeWidth = 5;
+
+    final path = Path();
+
+    path.lineTo(0, size.height * 0.25);
+    path.quadraticBezierTo(
+      size.width * 0.5,
+      size.height * 0.55,
+      size.width,
+      size.height * 0.25,
+    );
+    path.lineTo(size.width, 0);
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return true;
+  }
+}
+
+class HeaderWaves extends StatelessWidget {
+  const HeaderWaves({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      color: Colors.blue,
+      child: CustomPaint(
+        painter: _HeaderWavesPainter(),
+      ),
+    );
+  }
+}
+
+class _HeaderWavesPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint();
+    // propiedades
+    paint.color = Colors.red;
+    paint.style = PaintingStyle.fill;
+    paint.strokeWidth = 5;
+
+    final path = Path();
+
+    path.lineTo(0, size.height * 0.25);
+    path.quadraticBezierTo(
+      size.width * 0.25,
+      size.height * 0.15,
+      size.width * 0.5,
+      size.height * 0.25,
+    );
+    path.quadraticBezierTo(
+      size.width * 0.75,
+      size.height * 0.35,
+      size.width,
+      size.height * 0.25,
+    );
+    path.lineTo(size.width, 0);
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return true;
+  }
+}
