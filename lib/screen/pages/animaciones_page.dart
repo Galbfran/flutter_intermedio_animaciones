@@ -35,6 +35,12 @@ class _CuadradoAnimadoState extends State<CuadradoAnimado>
     );
 
     rotacion = Tween(begin: 0.0, end: 2 * 3.14).animate(controller);
+
+    controller.addListener(() {
+      if (controller.status == AnimationStatus.completed) {
+        controller.reverse();
+      }
+    });
   }
 
   late AnimationController controller;
